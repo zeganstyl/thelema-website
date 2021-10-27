@@ -1,37 +1,76 @@
-## Welcome to GitHub Pages
+![logo](images/thelema-logo-256.png)
+### Thelema Engine
 
-You can use the [editor on GitHub](https://github.com/zeganstyl/thelema-website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**Thelema** is multiplatform 3d graphics engine on Kotlin. It was based on libGDX sources and completely redesigned.
 
-### Markdown
+#### Download
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Enter your credentials to download engine libraries.
+[How to get token.](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```kotlin
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/zeganstyl/thelema-engine")
+        credentials {
+            username = "username"
+            password = "token"
+        }
+    }
+}
+```
+```kotlin
+dependencies {
+    implementation("app.thelema:thelema-jvm:0.6.0")
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[Quick Start](https://github.com/zeganstyl/thelema-engine/wiki/Quick-Start)
 
-### Jekyll Themes
+[Live TeaVM tests](https://zeganstyl.github.io/thelema-teavm-tests/)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zeganstyl/thelema-website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[Live Kotlin/JS tests](https://zeganstyl.github.io/thelema-kxjs-demo/)
 
-### Support or Contact
+[Thelema vs LibGDX](https://github.com/zeganstyl/thelema-engine/wiki/Thelema-vs-LibGDX)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[![youtube](images/youtube.png)](https://www.youtube.com/playlist?list=PLS4PI9m5p5MmodmfBNVft1_mUges3x35O)
+
+#### Features
+* Shaders
+  * Autogenerating shaders by shader nodes
+  * Deferred shading
+  * Physicaly based rendering (PBR)
+  * Emissive materials
+  * Tonemapping
+  * Bloom
+  * SSAO
+  * Cascaded shadow mapping
+  * Motion blur
+  * IBL
+* 3D graphics
+  * VBO, VAO, Instancing buffers
+  * Skinned meshes
+  * Lights: directional, point
+  * glTF 2.0 loading
+* Audio
+  * Ogg/Vorbis loading
+  * WAV loading
+  * Procedural sound generation
+* JSON
+* Image loading from JPG, PNG, TGA, BMP, PSD, GIF, HDR, PIC
+* ODE physics
+* Platforms: Desktop JVM, HTML5, Android
+
+#### Work in progress
+* 3D Editor
+* HTML5 rigid body physics
+* GUI (redesign)
+* Audio API (redesign)
+
+#### Things that may be implemented in future
+* Vulkan API
+* Kotlin/Native
+* Navigation mesh
