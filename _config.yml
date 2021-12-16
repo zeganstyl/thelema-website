@@ -1,3 +1,5 @@
 theme: jekyll-theme-dinky
 title: Thelema Engine
 description: Thelema is Kotlin multiplatform 3d graphics engine.
+github:
+  repository_url: https://github.com/zeganstyl/thelema-engine
